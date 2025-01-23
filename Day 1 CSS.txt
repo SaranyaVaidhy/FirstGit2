@@ -1,0 +1,167 @@
+CSS 
+====
+
+Presentation Layer
+—————————
+
+*Css ——> Cascading Style Sheet
+
+*It is used to Style ,format the webpages Created in HTML
+*We use Css to style an HTML document
+*It describes how HTML elements should be displayed .
+
+ <h1 style="color: red;">Greens Technology </h1>
+
+
+
+Structure of CSS :
+————————
+
+        h1{
+            color: ;
+            text-align: ;
+            font-size: ; 
+        }
+  
+
+*h1			——> For which Tag we are going to style /format that is called Selector 
+
+*{ } 			——> Have to use the curly braces inside that only we have to pass style /format
+
+*color
+*text-align	——> If we are editing /adding anything that’s called property ,we can use unlimited properties 
+*font-size
+
+
+
+
+
+CSS can be added to HTML documents in Three Ways :
+——————————————————————————
+*Inline CSS
+*Internal CSS
+*External CSS
+
+
+*Inline CSS : ( Inside the Tag worked as attribute — style )
+—————
+Using the Style attribute inside the HTML Tag
+
+
+     <p style="color: red; text-align: justify;"> lorem100</p>
+
+
+
+
+**Internal CSS : ( Inside the Head Tag )
+——————
+*Css rules by using a <style> element in the <head> section
+*An internal CSS is used to define a style for a single HTML page. An internal CSS is defined in the head section of an HTML page, within a style element.
+*If u want to differentiate the each same name of tag have to use  (id selector , class selector) concept 
+
+
+
+***External CSS : (External *.CSS File)
+————————
+*Css rules by using external CSS file 
+*An external stylesheet is a standalone . css file that is linked from a web page.
+ The advantage of external stylesheets is that it can be created once and the rules applied to multiple web pages.
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Value of h1:
+
+*orangered	——> Its called value for the corresponding property 
+*center		——> This is all called as value for the corresponding property 
+*30px		——> if we are using pixels / points that are all named as units for the corresponding property  
+
+Outline:
+---------
+<head>
+<style>
+        h1{
+            color: blue;
+            text-align: center;
+        }
+        p{
+            color: red;
+            text-align: center;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+<h1>Hello Folks</h1>
+    <hr>
+    <p>lorem100 </p>
+
+</body>
+
+External CSs:
+One page
+————
+<head>
+    <link rel="stylesheet" href="Py/style.css" type="text/css">
+</head>
+<body>
+    <h1>Hello Folks</h1>
+    <hr>
+    <p>lorem100</p>
+
+
+Another page ( Connected by href of link tag)
+——————
+h1{
+    color: red;
+}
+
+p{
+    color: green;
+}
+
+
+
+
+

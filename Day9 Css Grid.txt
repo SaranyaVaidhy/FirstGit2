@@ -1,0 +1,229 @@
+CSS Grid:
+==========
+CSS Grid is a powerful tool that allows for two-dimensional layouts to be created on the web.
+
+The vertical line of the Grid are called Grid Columns
+The horizontal line of the grid are called Grid Rows
+The space between each column and row are called as grid gaps
+
+Grid-template columns:
+----------------------
+Specifies the size of the columns, and how many columns in a grid layout
+
+Grid-template Rows:
+-------------------
+Specifies the size of the rows in a grid layout
+
+
+Grid - template Areas:
+——————————
+Specifies the each area in row and column  as grid layout  like table
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Html
+———
+ <!-- Grid -->
+
+ <!-- Its usefull for page layout  Grid , flex -->
+<!-- Flex onedimesion  row by row, column by column  -->
+
+
+
+
+<!-- 3rd workout -->
+<div class="layout">
+    <div class="head">Header</div>
+    <div class="side1">SideBar1</div>
+    <div class="main">Mainn</div>
+    <div class="side2">SideBar2</div>
+    <div class="foot">footer</div>
+</div>
+
+<!-- Grid 2dimension  - Responsive pages -->
+<!-- 2nd workout -->
+<div class="outbox">
+    <div class="boxes b1">1</div>
+    <div class="boxes b2">2</div>
+    <div class="boxes b3">3</div>
+    <div class="boxes b4">4</div>
+    <div class="boxes b5">5</div>
+    <div class="boxes b6">6</div>
+    <div class="boxes b7">7</div>
+    <div class="boxes b8">8</div>
+</div>
+
+
+
+<!-- 1stworkout -->
+
+<div class="container">
+    
+<div class="box">
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum praesentium animi eum tempora voluptates id corporis, dolorem omnis cupiditate qui? Culpa quaerat odit sunt. Sit cum quisquam error tempora saepe.</p>
+</div>
+<div class="box">
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum praesentium animi eum tempora voluptates id corporis, dolorem omnis cupiditate qui? Culpa quaerat odit sunt. Sit cum quisquam error tempora saepe.</p>
+</div>
+<div class="box">
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum praesentium animi eum tempora voluptates id corporis, dolorem omnis cupiditate qui? Culpa quaerat odit sunt. Sit cum quisquam error tempora saepe.</p>
+</div>
+<div class="box">
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum praesentium animi eum tempora voluptates id corporis, dolorem omnis cupiditate qui? Culpa quaerat odit sunt. Sit cum quisquam error tempora saepe.</p>
+</div>
+<div class="box">
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum praesentium animi eum tempora voluptates id corporis, dolorem omnis cupiditate qui? Culpa quaerat odit sunt. Sit cum quisquam error tempora saepe.</p>
+</div>
+</div>
+
+
+
+Css
+——
+
+/* 2nd workout */
+.outbox{
+    display: grid;
+    margin: 20px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 100px 200px 100px;
+    /* incase we have extra row it will take 
+    based on this */
+    grid-auto-rows: 200px;
+    gap: 20px;
+ /* it is to give priror the column or row */
+    /* grid-auto-flow: column ; */
+    grid-template-columns: repeat(3,200px);
+    align-items:end;
+    /* justify-content:end ; */
+    justify-items: stretch;
+}
+
+.boxes{
+    background-color: red;
+    color: white;
+    font-size: 3rem;
+    display: grid;
+    justify-content: center;
+    align-items:center;
+    
+}
+
+.b1{
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+    /* positive starts from left */
+    grid-column: 1/4; 
+    /* negative starts from right */
+    grid-column: 1/-1;
+    /* if u get confuse in numbers use span */
+    grid-column: span 3;
+    justify-self: center;
+
+
+}
+.b2{
+    grid-row: span 2;
+}
+
+
+
+
+
+/* 1st workout */
+body{
+    background-color: bisque;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-columns: 200px 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 200px 200px auto;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; to overcome this */ 
+    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: minmax(200px ,1fr)1fr 1fr;
+     grid-template-columns: repeat(3,minmax(200px),1fr); 
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr)) ;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    
+    /* column-gap: 20px;
+    row-gap: 20px; */
+    gap: 20px;
+}
+
+.box{
+    padding: 1rem;
+    background-color: teal;
+    color: white;
+}
+
+
+
+
+
+3rd workout
+
+body{
+    background-color: bisque;
+}
+
+.layout{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-areas: 
+    "h h h h h"
+    "sb1 m m m sb2"
+    "f f f f f";
+    grid-template-rows: 10vh 80vh 10vh;
+}
+
+.head{
+    grid-area: h;
+}
+.side1{
+    grid-area: sb1;
+}
+
+.main{
+    grid-area: m;
+}
+
+.side2{
+    grid-area: sb2;
+}
+.foot{
+grid-area: f;
+}
+
+
+.layout div{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+border: 2px solid black;
+background-color: rgb(200, 160, 170);
+font-size: 2rem;
+font-family: Georgia, 'Times New Roman', Times, serif;
+
+}

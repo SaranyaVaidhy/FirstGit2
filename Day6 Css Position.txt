@@ -1,0 +1,229 @@
+Css Position
+
+Position:
+==========
+The position property specifies the type of positioning method used for an element 
+
+static 
+relative 
+absolute
+Inherit
+fixed
+sticky
+
+
+
+
+CSS Icons:
+----------
+Go To Google--->Check Font Awesome--->Choose Icon:
+<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<i class="fas fa-cloud"></i>
+<i class="fas fa-heart0></i>
+<i class="fas fa-car"></i>
+<i class="fas fa-file"></i>
+<i class="fas fa-bars"></i>
+
+</body>
+</html>
+
+
+Navigation Bar
+===============
+A navigation bar needs standard HTML as a base.
+Navigation Bar = List of Links
+
+Building a navigation bar from a standard HTML list
+<nav>
+<ul>
+  <li><a href="default.asp">Home</a></li>
+  <li><a href="news.asp">News</a></li>
+  <li><a href="contact.asp">Contact</a></li>
+  <li><a href="about.asp">About</a></li>
+</ul>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Html
+——
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./posi.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Position -->
+    <div>
+        <h2>Greens OMR</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque voluptas nemo blanditiis non provident modi quam impedit tempora eveniet, velit nesciunt commodi ab explicabo quasi asperiores atque! Nisi, ipsam molestias!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque voluptas nemo blanditiis non provident modi quam impedit tempora eveniet, velit nesciunt commodi ab explicabo quasi asperiores atque! Nisi, ipsam molestias!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque voluptas nemo blanditiis non provident modi quam impedit tempora eveniet, velit nesciunt commodi ab explicabo quasi asperiores atque! Nisi, ipsam molestias!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque voluptas nemo blanditiis non provident modi quam impedit tempora eveniet, velit nesciunt commodi ab explicabo quasi asperiores atque! Nisi, ipsam molestias!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque voluptas nemo blanditiis non provident modi quam impedit tempora eveniet, velit nesciunt commodi ab explicabo quasi asperiores atque! Nisi, ipsam molestias!</p>
+    </div>
+    <div class="one">
+        <div class="two"></div>
+    </div>
+    <!-- <div class="two"></div> -->
+
+    <div>
+    <h2>Greens OMR</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque voluptas nemo blanditiis non provident modi quam impedit tempora eveniet, velit nesciunt commodi ab explicabo quasi asperiores atque! Nisi, ipsam molestias!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque voluptas nemo blanditiis non provident modi quam impedit tempora eveniet, velit nesciunt commodi ab explicabo quasi asperiores atque! Nisi, ipsam molestias!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque voluptas nemo blanditiis non provident modi quam impedit tempora eveniet, velit nesciunt commodi ab explicabo quasi asperiores atque! Nisi, ipsam molestias!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque voluptas nemo blanditiis non provident modi quam impedit tempora eveniet, velit nesciunt commodi ab explicabo quasi asperiores atque! Nisi, ipsam molestias!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque voluptas nemo blanditiis non provident modi quam impedit tempora eveniet, velit nesciunt commodi ab explicabo quasi asperiores atque! Nisi, ipsam molestias!</p>
+</div>
+</body>
+</html>
+
+
+Css
+——
+.one{
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    margin-top: 40px;
+    /* position: relative; */
+    /* it will stick in the webpage by our half set */
+    position: sticky;
+    top: 0px;
+    bottom: 0px;
+
+}
+
+.two{
+    width: 100px;
+    height: 150px;
+    background-color: orange;
+    /* position: relative; */
+    /* half set - directing from static position by using angles*/
+    /*left: 30px;
+      top: 30px; */
+      /* center */
+    /* left: 45px;
+    bottom: 175px; */
+
+     /* position: static; */
+
+     /* position: absolute; */
+     /* background sets */
+     /* z-index: -1; */
+
+/* whenever we using this absoulte in child element it will
+search where the parent as non static psoition if its not there
+root element(html) , if we pass non static to the parent
+it take from parent*/
+/* absoulte alswys search for non static position */
+     /* position: absolute;
+     top:25px ;
+     left: 45px; */
+
+    /* fixed -- it will take from document */
+     /* position: fixed;
+     left: 45px;
+     top:45px; */
+
+     /* inherit -- it will take from parent */
+     position: inherit;
+     left: 45px;
+     top:45px;
+
+     
+
+}
+
+
+/* h2{
+    position: relative;
+    left: 100px;
+} */
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- have to connect with respective link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<style>
+    span{
+        color: orange;
+        font-size: 3rem;
+    }
+</style>
+<body>
+    <!-- Icons -->
+    <h1>  <span><i class="fa-brands fa-instagram"></i> </span>Instagram</h1>
+    <p><i class="fa-solid fa-user"></i> User</p>
+
+
+
+    <!-- HTML Layout update tags -->
+
+    <!-- To add headings , veryfull for screenreaders -->
+    <Header>
+        <!-- hgroup  = to group the multiplev headings -->
+        <hgroup>
+       <a href="index.html">HOME</a>
+       <a href="about.html">About</a>
+    </hgroup>
+    </Header>
+
+    <!-- Navigation to hold list  -->
+    <nav>
+    <ul>
+        <li>Java</li>
+        <li>Python</li>
+        <li>Selenium</li>
+        <li>React</li>
+    </ul>
+</nav>
+
+<!--  blogpost  -->
+<article></article>
+
+<!-- to hold the grouping some elements by section but not for all page contents to group-->
+<section></section>
+
+<!-- to pass extra information in webpage -->
+<aside></aside>
+
+    <!-- at last total , GSt in footer content -->
+ <footer>GST , Total</footer>
+</body>
+</html>

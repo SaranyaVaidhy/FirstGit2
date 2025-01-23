@@ -1,0 +1,119 @@
+CSS Box Model
+
+16px=100
+
+CSS Height & Width:
+===============
+div {
+  height: 200px;
+  width: 500px;
+  background-color: powderblue;
+}
+
+
+CSS Boxes:
+=========
+
+CSS Borders:
+==========
+The border-style property specifies what kind of border to display.
+
+Different CSS border properties:
+dotted, dashed, solid, double, groove, ridge, inset, outset, none, hidden
+Define it as :{border-style: dotted;}
+
+			
+For Round Borders : border-radius:5px;
+For specific Browser: -moz-border-radius: 10px; or -webkit-border-radius: 10px; 
+Eliptical border radius: 80px 50px
+                                      horz  verti
+
+CSS Padding
+==========
+Padding is used to create space around an element's content, inside of any defined borders.
+The CSS padding properties are used to generate space around an element's content,
+ inside of any defined borders.
+div {
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+
+	(or)
+	 top  right  bottom  left
+padding: 25px  50px   75px   100px
+
+	(or)
+	top   l&r  bottom
+padding:25px  50px  75px;
+
+	(or)
+	t&b   l&r
+padding:25px  50px;
+
+	(or)
+	all
+padding:25px;
+
+}
+
+
+CSS MARGINS:
+============
+Margins are used to create space around elements, outside of any defined borders.
+The CSS margin properties are used to create space around elements, outside of any defined borders.
+
+p {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
+
+	(or)
+
+	top   right  bottom   left
+margin: 25px   50px   75px    100px
+
+	(or)
+
+	top    l&r    bottom
+margin: 25px   50px   75px;
+
+	(or)
+
+	t&b l&r
+margin:25px 50px;
+
+  	(or)
+
+	all
+margin:25px; or auto;
+
+}
+
+
+CSS Basic Styles:
+==================
+
+color: blue;
+font-family: verdana;
+font-size: 300%;
+Text-align: center;
+border: 2px solid powderblue;
+padding: 30px;
+margin: 50px;
+Background: black  url(‘’) repeat-x scroll;
+
+
+box-sizing: border-box;/* it won't consider padding calculation*/
+max-width: 1200px;/* to extend upto given px*/
+min-width: 700px;
+
+overflow: hidden/scroll; /*if extra text given then we can use*/
+box-shadow: 10px 10px 10px gray; or  insert -10px -10px 10px 20px gray;
+                       horz  vert blur                                            four-dir
+
+
+display: inline/block/inline-block/hidden;
+
+visibility: hidden;/*space will be accoupled*/

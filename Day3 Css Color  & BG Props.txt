@@ -1,0 +1,144 @@
+ Css Color  & BG Props
+colors
+=====
+
+h3{
+ color:rgb(100,150,75); -->Red Green Blue Proportion
+ color:#64964b -->Hexadecimal value
+ color:hsl(100,33%,40%)
+
+/*Hue-It is mentioned in degree It is like an complete 360degree
+ cycle i.e:- RED(0),YELLOW(60),GREEN(120),CYAN(180),BLUE(240),MAGENTA(300)
+
+  Saturation-To define how much grey should be there i.e:- 100%=>No gray 0%=>Completely gray
+   
+  Lightness- 100%=>White  0%=>Black 50%=>Normal*/
+ 
+background-color:rgba(255,0,0,.5)
+Here the fourth value a represents alpha value i.e:- to define opacity and 
+we'll be mentioning it btw 0-1 in decimal value
+
+}
+ eg:Using different formats:
+
+h3{
+    /* Based on rgb */
+    color: rgb(100, 150, 75);
+
+    /* Based on hexa decimal value */
+    color:#64964b ;
+
+    /* Hue,Saturation,lightness */
+    color: hsl(100, 33%, 44%);
+ 
+    /* background color */
+    background-color: rgba(255, 0, 0, .2);
+}
+
+
+
+CSS Background:
+================
+The CSS background properties are used to add background 
+effects for elements.
+
+For CSS Background property we can set accordingly for
+background-color
+background-image
+background-repeat
+background-attachment
+
+background-color:red;
+background-image:url("image.img");
+background-repeat:no-repeat/repeat-x;
+background-attachment:fixed/scroll;
+background (shorthand property) - transparent | color || url || repeat ||scroll || position 
+Example: background: silver url(image.png) repeat-y
+
+background: linear-gradient(to top,silver,black)
+background-size: cover;
+							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-size: 75%;
+        }
+        h1{
+
+            color:rgb(50, 168, 64);
+            color: #32a840;
+            /* hue - 0 to 119 +>red
+            green --> 120 to 239
+            blue --> 240 to 359
+            360 --> pink
+            
+            
+            satu --> 100% there's no
+            gray
+            0% --> gray
+            
+            Ligh --> 0% -->black 
+            100% --> white*/
+            color:hsla(0, 38%, 46%,0.8) ;
+            /* alpha --> o to 1 decimal */
+            background-color: rgb(255, 77, 0);
+            background-color: rgba(255, 77, 0,0.70);
+        }
+
+        p{
+            font-size: 2em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+
+		
+	body{
+            background-color: bisque;
+            background-image: url(simbu.jpeg);
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <!-- Colors -->
+    <h1>Greens Omr</h1>
+    <p>Adyar Greensss, OMR</p>
+
+
+</body>
+</html>

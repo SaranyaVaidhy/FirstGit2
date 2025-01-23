@@ -1,0 +1,172 @@
+CSS Flexbox:
+=============
+Flexbox is a one-dimensional layout method for arranging items in rows or columns. Items flex (expand) to fill
+additional space or shrink to fit into smaller spaces.
+
+Features of flexbox:
+=======================
+->A lot of flexibility is given.
+->Arrangement & alignment of items.
+->Proper spacing
+->Order & Sequencing of items
+
+
+
+Shortened - property —> flex : grow shrink basis
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- FLex Direction -->
+    <div class="box">
+
+        <div class="sub s1"></div>
+        <div class="sub s2"></div>
+        <div class="sub s3"></div>
+        <div class="sub s4"></div>
+
+
+    </div>
+
+
+    <!-- FLEX -->
+
+    <div class="container">
+        <p class="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, perferendis nihil inventore laudantium consequatur dicta veniam impedit libero facere necessitatibus. Ipsum rerum molestiae, esse error asperiores autem voluptatum in perspiciatis.</p>
+        <p class="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, sed quod maiores modi cupiditate aliquid distinctio magni non similique blanditiis facilis vitae, magnam labore eos saepe impedit veniam. Odio, repellendus.</p>
+        <p class="p3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi magnam similique, quo officiis eum nemo consequuntur, ipsa enim necessitatibus distinctio non voluptas fuga numquam itaque, pariatur soluta dolorem. Magni, quasi.</p>
+
+    </div>
+
+
+
+
+
+Css
+———
+
+/*   Only for alignment
+ row -> horzitonal is x -axis(main) , veritcal is y-axis
+column --> veritcal = x-axis(main) ,horzitonal y-axis */
+
+/* flexdirection by default row only */
+.box{
+    background-color: brown;
+    min-height: 250px;
+    display: flex;
+     flex-direction: row; 
+    /*by defalut - row */
+    /*row -(main x-axis) - justify -> horizontal  */
+    /* flex start - left (default) */ */
+    justify-content: center;
+    /* row - y-axis- alig items ->vertical */
+    /* /* flex start - top (default) */
+    align-items: center;
+
+
+    flex-direction: column;
+    /*column - (main - x-axis)--> justify -vertical
+        top (default)  */
+    justify-content: center;
+     /*column -(main y-axis) - alignitems -> horizontal 
+     default (left) */
+    align-items: flex-end;
+
+    /* to equal spacing , we can use for marign distributes */
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center; 
+
+    /* space for allover places */
+     flex-direction: row;
+    justify-content: space-around;
+    align-items: center; 
+
+        /* Strech to align entire height*/
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: stretch;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    /*align particular items   */
+.s1{
+    align-self: flex-start;
+    
+}
+
+.s4{
+    /* to spacing based on ratio */
+    flex:2;
+    /* to shrink the items when the browser size decreases */
+    flex-shrink: 1;
+    flex-grow: 2;
+
+}
+.s2{
+    /* to grow the items when the browser size increases */
+    flex-grow: 1;
+    flex-basis: 0px;
+
+   
+}
+.s3{
+    /* one line flex - grow , shrink , basis */
+    flex:3 2 0px;
+}
+
+
+
+.sub{
+    width: 100px;
+    /* height: 150px; (row) */ 
+    height: 50px; 
+    background-color:aqua;
+    border: 2px solid black;
+}
+
+
+
+/* Yesterdays basic flex */
+.container{
+    display: flex;
+    /* flex-direction: column; */
+}
+
+p{
+    padding: 10px;
+}
+
+.p1{
+    background-color: red;
+    flex: 1;
+    order: 1;
+}
+
+.p2{
+    background-color: greenyellow;
+    flex: 1;
+    order: 3;
+}
+
+.p3{
+    background-color: orange;
+    flex:2;
+    order: 2;
+}

@@ -1,0 +1,212 @@
+Css  Text Props , Units 
+Texts styling in css
+==============
+Serif:
+Serif fonts have extra details on the end of the main strokes of the letters These details are known as serifs
+eg:Times new roman
+
+Sans-Serif:
+Sans-Serif fonts have straight ends to letter and therefore have a cleaner design
+eg:Arial
+
+Monospace:
+Every letter in a monospace (or fixed-width) font is the same width 
+Non-Monospace fonts have different width
+eg:courier new
+
+Cursive:
+Cursive fonts either have joining strokes or other cursive characteristics such as handwriting styles
+eg : Handwriting, Joined letters
+ 
+
+Fantasy:
+Fantasy fonts are usually decorative fonts and are often used for titles .They are not designed for long bodies of text
+eg : Headings 
+
+
+Units --> px , pt ,fr,% , em , rem , vh , vw  , vmin/vmax
+======
+
+Font-size: px->pixel=>1/125 of inch
+           Default font size is 16px
+
+           Based on % i.e:- 100% = 16px
+           
+           em->Width of M default is 16px
+           if mentioned 2em i.e:- 2*16px=32px 
+           if again mentioned 2em it calculates ad 32*2=64px i.e:- it calculates from the parent size
+
+
+Standard sixteen pixel scale:
+=============================
+
+h1=32px         =          h1=200%          =             h1=2em
+h2=24px         =          h2=150%          =             h2=1.5em                 
+h3=18px         =          h3=133%          =             h3=1.125em
+body=16px      =          body=100%      =             body=100%
+							   p=1em
+
+font-weight:             Style                    Stretch
+-------------           -------			  ---------
+Light                    Normal			  Condensed
+Medium		    Italic	                  Regular
+Bold 		    Oblique	         Extended
+
+
+Text Prop
+——————
+ p{
+	 text-transform: uppercase;
+	 text-decoration: none;
+	 text-align: center;
+          text-indent: 50px;
+            text-align: justify;
+            color: red;
+            letter-spacing: 10px;
+            text-decoration: underline;
+            text-indent: 2rem;
+            margin: 20px 30px 200px;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+HTML
+———
+ 
+    <!-- Units  em , rem -->
+    <!-- <div class="con">
+
+<p class="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+    Consequatur quia perferendis magnam? Harum earum, adipisci nihil voluptatum eos, soluta repellendus
+     illum aliquam rem pariatur blanditiis aspernatur exercitationem cum, beatae deserunt!</p>
+<p class="p2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. C
+    onsequatur quia perferendis magnam? Harum earum, adipisci nihil voluptatum
+     eos, soluta repellendus illum aliquam rem pariatur blanditiis aspernatur
+      exercitationem cum, beatae deserunt!</p>
+
+
+    </div> -->
+
+    <!-- vw , vh  , vmin/max -->
+    <div class="box"></div>
+
+
+
+
+Css
+——
+
+
+/* html{
+    font-size: 20px;
+} */
+/* 
+.con{
+    /* em - relative  from parent 
+    font-size: 2em;
+} */
+
+/* .p1{
+    font-size: 2em;
+} */
+
+/* .p2{
+
+    rem - relative from root element
+    font-size: 2rem;
+} */
+
+
+.box{
+    /* view port width & view port height
+        view port - min , max -> which one will be min/max based that
+         it will execute
+    */
+    
+    width: 50vw;
+    height: 20vh;
+    border: 2px solid black;
+
+    /* width : 50vmin; */
+    width: 50vmax; 
+    height: 20vh;
+    border: 2px solid black;
+
+}
+
+}
+
+
+
+Pseudo
+———
+<title>Pesudo</title>
+    <style>
+        /* p::first-letter{
+            font-size: 4em;
+        } */
+
+        p::first-line{
+            font-size: 20px;
+        }
+
+        a:link{
+            background-color: black;
+        }
+        a:active{
+            color: red;
+        }
+
+        input:focus{
+            color: greenyellow;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Pseduo Elements-->
+    <input type="text" name="" id="">
+<a href="https://www.yotube.com">
+    Youtube
+</a>
+<input type="text" name="" id="">
+    <h1>Movies</h1>
+<p>Greens Omr Tech Chennai</p>
+</body>

@@ -1,0 +1,134 @@
+Media Query:
+=============
+Media queries allow you to apply CSS styles depending on a device's general type 
+(such as print vs. screen) or other characteristics such as screen resolution or browser viewport width
+
+@media (min-width:801px){
+    .container p{
+              width:30%
+              float:left;
+              padding:15px
+                }
+
+            .para3{
+                background-color:red;
+                  }
+}
+
+CSS color gradient:
+=====================
+->linear-gradient(color's)
+->radial-gradient(color's)
+->repeating-linear-gradient(color's)
+->repeating-radial-gradient(color's)
+
+to change style:
+------------------
+->linear-gradient(toleft,color's)
+
+transparent background: linear-gradient(180deg,rgba(0,255,0,0),rgba(255,255,0,.5))
+linear-gradient(torigt,blue 30% blue,red 20% red)
+
+toleft,toright,totop
+->repeating-linear-gradient(toleft,red 10%,green 40%)
+
+-->radial
+circle at 40px 30px,eliptical-default
+
+for: 3 color background -image: radial-gradient:(circle 100px at center center,organge,red,blue)
+
+circle farthest-side at 130px 50px,green,blue,red(or) circle farthest-corner at 130px 50px,green,blue,red
+circle closest-side at 130px 50px,green,blue,red(or) circle closest-corner at 130px 50px,green,blue,red
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <div class="container">
+        <p class="p1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci, rem? Asperiores adipisci aperiam tempore harum totam facere doloribus perspiciatis fuga, velit quaerat, et illum placeat deleniti inventore cumque? Pariatur amet commodi debitis vel voluptatibus iste, praesentium quibusdam ratione impedit veniam voluptates ipsam temporibus accusamus magni magnam necessitatibus aliquam facere molestiae eum suscipit excepturi dicta ad dolorem! Quidem voluptas at aliquid vero nobis obcaecati laudantium laboriosam inventore quam nesciunt cumque eos nihil optio recusandae minima illum, rerum, corrupti, sit veritatis. Voluptate dolores suscipit quidem ipsam fuga doloremque. Eveniet quia voluptatibus inventore dolorum in vel architecto praesentium quidem vitae nam? Nulla esse maxime itaque eum beatae impedit porro sed ad deserunt assumenda! Nisi, perferendis labore! Fuga ipsam nemo omnis ab laudantium, quos deleniti. Mollitia, accusantium enim nihil quidem libero perspiciatis nobis quasi magnam dolores cupiditate quia voluptates quam sequi, iste numquam aut, blanditiis voluptatibus ea excepturi inventore nesciunt odit optio voluptate consequatur. Iusto soluta praesentium quibusdam necessitatibus magni eveniet adipisci minus eligendi delectus provident aliquid debitis neque, commodi ratione veritatis totam quos veniam temporibus amet. Nemo, quae sapiente. Molestias temporibus, et nobis unde perspiciatis amet ipsum dicta impedit repellendus modi? Iusto, dolorum quo voluptate consequatur laborum ab explicabo iste sed officiis cum.</p>
+        <p class="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto earum enim qui officiis aspernatur. Nulla distinctio quis, ipsum esse iusto vitae a, odio, sit soluta vero natus sequi qui quae vel quisquam. Inventore libero eveniet id! Alias, totam tempora autem perspiciatis recusandae animi, quo exercitationem expedita molestias, molestiae velit. Dolorem obcaecati molestiae doloremque aut architecto placeat quidem. Vitae suscipit molestias molestiae laboriosam iste ducimus rem et obcaecati commodi unde sapiente error quis consectetur dolorem, doloremque modi laborum ad dolor voluptatibus! Molestias labore cum, deleniti possimus laudantium provident temporibus animi modi quasi voluptatum, voluptas numquam nemo fugit iure non quis similique.</p>
+        <p class="p3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor quos corporis culpa error vitae ex ipsam, ipsa odit, quas non consectetur? Excepturi, dignissimos odio quidem dolore ipsam assumenda nemo minus laudantium hic. Sunt, quia doloremque reprehenderit explicabo qui esse odit modi deserunt eaque libero! Mollitia modi maxime natus ducimus, illo error non repellendus consequatur quod omnis reiciendis consectetur voluptas doloribus architecto, illum amet aut qui sit? Laudantium eaque iusto quis, officiis recusandae illum quasi dignissimos quam vel magnam omnis voluptatem nulla fuga voluptatum minima ab harum. Distinctio laboriosam, aut cum atque laborum ipsa quis voluptatem cumque impedit veritatis excepturi neque.</p>
+
+    </div>
+
+
+Css
+—
+
+.p1{
+    background-color: red;
+}
+
+.p2{
+    background-color: yellowgreen;
+}
+
+.p3{
+    background-color: yellow;
+}
+
+@media  (min-width:801px){
+   
+    .container p{
+        width: 30%;
+        float: left;
+        padding: 10px;
+
+    }
+
+}
+
+
+
+
+
+Gradient HTML
+—————————
+  <!-- Gradient -->
+    <div class="box"></div>
+
+
+Css
+——
+
+
+.box{
+    height: 250px;
+    width: 250px;
+    margin: auto;
+    /* linear & radial  */
+    background:linear-gradient(red,white,blue);
+    background:radial-gradient(red,white,blue);
+     /* linear & radial  positioning  & degree angles*/
+    background:linear-gradient(to left,rgb(219, 14, 14),white,blue);
+    background:linear-gradient(to top right,rgb(219, 14, 14) ,white,blue);
+     /* linear & radial  how to add solid form colors in gradient  by using units */
+    background:linear-gradient(to top right,rgb(80, 59, 59) 60%,white,blue);
+    background:linear-gradient(250deg,rgb(219, 14, 14) 60%,white,blue);
+    background:linear-gradient(to left,red 20%, red,green 30%, green);
+    background:radial-gradient(red 20%, red,green 30%, green);
+  /* linear & radial hwo to use repeating gradient  */
+    background:repeating-linear-gradient(red 10px,red 20px,yellowgreen 10px,yellowgreen 30px);
+    background:repeating-radial-gradient(red 10px,red 20px,yellowgreen 10px,yellowgreen 30px);
+
+}

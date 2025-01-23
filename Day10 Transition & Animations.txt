@@ -1,0 +1,210 @@
+Transition & Animations 
+==================
+
+Transition 
+—————
+* It is effect that when a mouse event Occurs in element performs on browser 
+
+
+Transition Duration :
+—————————
+* It is to set the transition effect as sec & milisecond
+
+Transition Property:
+————————————
+* It is to specifies  the css property for transition effect is for particular element
+
+Transition Timing Function
+————————————
+* It specifies speed curve of element in the transition effect 
+
+
+Transition Delay:(seconds)
+—————————
+* It is to delay the transition effect for specified property 
+
+
+Transition : ( shortened property )
+—————
+* transition : property | duration | delay | timing-function delay;
+
+
+
+
+
+Animation 
+—————
+To specify a element and give some colours , actions & effect to every moment without any mouse actions
+
+
+Animation-name
+————————
+To specify the name of @keyframes animation 
+
+@keyframe
+——————
+To specify the animation coding key
+
+Animation-Duration
+——————————
+To specify how long time animation should work
+
+Animation-Fill-Mode
+—————————
+To hold any animation effect at last
+
+Animation -iteration
+—————————
+To execute multiple times the animation effect
+
+Animation- timing -function
+————————————
+To speed the each effect as per motion of animation
+
+Animation -direction 
+——————————
+To alter the direction of effect
+
+
+
+Animation : (Shortened Property )
+———————————————
+One-line prop : ani-name |  duration | timing-function | delay  | iteration-count | direction 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- ANimations -->
+
+<div class="sq"></div>
+
+
+
+
+
+Css
+——
+
+/* Transition is about event by mouse action */
+.sq{
+    width: 300px;
+    height: 300px;
+    background-color: red;
+    transition-duration: 3s;
+    /* which one shuld priror to transition */
+    transition-property: background-color;
+    transition-property: all;
+    /*slow process from start */
+    transition-timing-function: ease-in;
+/*slow process from end */
+    transition-timing-function: ease-out;
+    /*slow process both start and end */
+    transition-timing-function: ease-in-out;
+    /*Uniform speed */
+    transition-timing-function: linear;
+    transition-timing-function: cubic-bezier(0.86, 0, 0, 1.09);
+    transition-delay: 1s;      
+    transition: all 2s linear;
+
+}
+
+
+.sq:hover{
+    background-color: yellowgreen;
+    width:500px ;
+    /* trnaslate move vertical(yaxis) or
+     horizontal (xaxis)  --> positive & negative*/
+    transform: translate(30px);
+}
+
+
+
+
+
+Animation
+—————
+Html
+———
+ <!-- animation -->
+    <div class="box"></div>
+
+Css
+——
+
+/* to target a element & give some colors and
+effects without mouse event , it plays automatically
+  */
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+    border-radius: 50%;
+    /* to set some for animation */
+    animation-name: circle;
+    /* to set how long time it shuld be work */
+    animation-duration: 4s;
+    /*can set which style needs to hold at last
+    momemnt  */
+    animation-fill-mode: forwards;
+    /*can set how much to repeat same effecyt */
+    animation-iteration-count: 3;
+    /* to move the element use position */
+    position: relative;
+    /* to set the speed  */
+    animation-timing-function: ease-in;
+    /* to  set change direction*/
+    animation-direction: reverse;
+}
+
+/* to specifies the animation element by 
+using animation name  in the identifier*/
+@keyframes circle {
+    /* if we need smoother effect starts from 
+    zero percentage  */
+    0%{
+        background-color: yellowgreen;
+        left: 0px;
+        top: 0px;
+    }
+
+
+    /* this percentage based on ani-dura */
+    /* 50%{
+        background-color: red;
+        width: 20px;
+        height: 20px;
+        left: 300px;
+        top:300px;
+    } */
+    100%{
+        background-color: yellow;
+        width: 200px;
+        height: 200px;
+        left: 600px;
+        top: 600px;
+    }
+
+}

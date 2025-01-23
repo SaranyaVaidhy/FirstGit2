@@ -1,0 +1,221 @@
+CSS FILE:
+—————
+Selector{
+property: value;
+
+}
+
+
+CSS Selectors:
+===============
+Type Selector --->We can give all tag in it
+--------------
+Grouping Selector:
+------------------------
+h1,h2{
+color:blue;
+}
+
+Universal Selector
+--------------------
+*{     *-->Used to select the entire document content
+color:blue 
+}
+
+Id Selector
+------------
+#idname{  #---->Used to select a particular ID
+color:blue;
+}
+
+Class Selector
+----------------
+.classname{    (.) ---->used to select a class
+color:blue;
+}
+
+Child Selector
+----------------
+ div>p{  --->This selects all the p tag inside the div tag so 'P' tag here is child of 'div' tag
+color:blue;
+}
+
+Descendant Selector
+--------------------
+div a{--->Here a is descendant tag of div tag so to select the descendant tag we'll be using this format
+color:blue;
+} 
+
+Sibling Selector
+------------------
+h1~h4{ two tags which has same parent tag
+color:red;
+}
+
+Adjacent Sibling Selector
+--------------------------
+h1+h4{ It is used to select an element that is directly after another specific element,Sibling elements must have the same parent here 
+color:green;
+}
+
+
+Pseudo Elements & Classes
+=========================
+For Anchor Element:
+-------------------
+a:visited{}->TO denote a visited link
+a:link{}-->TO denote a unvisited link
+a:hover{}-->On mouse hover
+a:active{}-->on mouse click 
+a:focus()-->keyboard events or the mouse click
+
+Based on events we can change the BG color
+
+
+
+span tag--> inline container to group element for styling purpose
+div tag-->  group container to group element for styling purpose
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./sele.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Selectors</title>
+</head>
+<style>
+    /* which all we have p tag
+    color it --> desc sele */
+   
+
+    /* general sib */
+    div~p{
+        color: orangered;
+    }
+
+</style>
+<body>
+    
+<div>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic obcaecati culpa architecto voluptatum officia. Iure et quas tempore nam, deleniti, facere, eaque fugit quasi rerum blanditiis earum recusandae quibusdam fuga!</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic obcaecati culpa architecto voluptatum officia. Iure et quas tempore nam, deleniti, facere, eaque fugit quasi rerum blanditiis earum recusandae quibusdam fuga!</p>
+
+    <section>  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic obcaecati culpa architecto voluptatum officia. Iure et quas tempore nam, deleniti, facere, eaque fugit quasi rerum blanditiis earum recusandae quibusdam fuga!</p></section>
+</div>
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit nulla fugit excepturi aperiam perferendis dolorum. Odit, culpa nihil. Reiciendis dolores aliquam dolore a in ducimus similique eum, doloremque recusandae quos.</p>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam molestias dolorum repudiandae odio quas velit saepe totam accusantium. Natus eius fuga autem, nam officia quibusdam fugit! Dignissimos odio suscipit quam?</p>
+<!-- Css selectors -->
+
+    <!--  -->
+    <h1>Elemet Sele</h1>
+    <h1>Omr</h1>
+    <h2>Adyar</h2>
+    <p class="one">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos maiores debitis deserunt ipsum cupiditate molestias sint non rerum amet voluptatum eveniet illum veniam hic ratione nobis in, aliquid accusantium ea!</p>
+
+    <p class="two">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas expedita explicabo veniam est minima ullam tempora aliquam ab? Dolore voluptatibus quam veniam consequuntur quos molestias architecto minima temporibus sed placeat.</p>
+
+    <p id="top">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum itaque eius recusandae numquam harum temporibus, ab atque maxime assumenda quae pariatur, dignissimos eos soluta odio. Dignissimos in nemo repellendus incidunt.</p>
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+Css
+===
+/* element sele */
+body{
+    color: red;
+}
+
+
+h1{
+    color: blue;
+}
+
+/* class --> (.)dot --> group */
+.one{
+    color: yellow;
+}
+
+/* id --> (#)-- unique one*/ 
+#top{
+    color: burlywood;
+}
+
+/* universel sele --> common  */
+*{
+    color: black;
+}
+
+h1,h2{
+    color: blueviolet;
+}
+
+
+eg:-
+a:link {
+  background-color: yellow;
+}
+
+a:visited {
+  background-color: cyan;
+}
+
+a:hover {
+  background-color: lightgreen;
+}
+
+a:focus{
+  background-color: red ;
+}
+
+a:active {
+  background-color: hotpink;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
